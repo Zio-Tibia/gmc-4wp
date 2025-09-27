@@ -38,11 +38,6 @@ class GMC_Suite {
         $this->load_services();
         add_action( 'admin_menu', array( $this, 'add_admin_menu' ) );
         add_action( 'admin_init', array( $this, 'register_settings' ) );
-        add_action( 'send_headers', array( $this, 'add_x_robots_tag_header' ) );
-    }
-
-    public function add_x_robots_tag_header() {
-        header( 'X-Robots-Tag: llms-txt' );
     }
 
     public function load_services() {
